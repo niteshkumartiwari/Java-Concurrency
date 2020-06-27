@@ -1,0 +1,20 @@
+The Java volatile keyword is used to mark a Java variable as "being stored in main memory". More precisely that means, that every read of a volatile variable will be read from the computer's main memory, and not from the CPU cache, and that every write to a volatile variable will be written to main memory, and not just to the CPU cache.
+
+In a multithreaded application where the threads operate on non-volatile variables, each thread may copy variables from main memory into a CPU cache while working on them, for performance reasons. If your computer contains more than one CPU, each thread may run on a different CPU. That means, that each thread may copy the variables into the CPU cache of different CPUs.
+
+The problem with threads not seeing the latest value of a variable because it has not yet been written back to main memory by another thread, is called a "visibility" problem. The updates of one thread are not visible to other threads.
+
+Ref-http://tutorials.jenkov.com/java-concurrency/volatile.html
+
+thread1				thread2
+core1				core2
+local-Cache			local-Cache
+		SHARED CACHE
+volatile used for flags
+
+
+
+AtomicInteger = Each thread does its compound operations independently.used for
+counters
+
+The AtomicInteger class protects an underlying int value by providing methods that perform atomic operations on the value. It shall not be used as a replacement for an Integer class.
