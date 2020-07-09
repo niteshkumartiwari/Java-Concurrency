@@ -2,7 +2,7 @@ package Visibility;
 
 public class Driver implements Runnable{
     private static int counter1=0;
-    private int counter2=0;
+    private volatile int counter2=0;
 
     public static void main(String[] args) {
         Driver driver= new Driver();
