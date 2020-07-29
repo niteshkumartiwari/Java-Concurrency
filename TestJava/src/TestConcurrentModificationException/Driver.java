@@ -22,12 +22,12 @@ import java.util.concurrent.CopyOnWriteArrayList;
 
 public class Driver {
     public static void main(String[] args) {
-        List<String> list= new CopyOnWriteArrayList<>();
-        list.add("1");
-        list.add("2");
-        list.add("3");
-        list.add("4");
-        list.add("5");
+//        List<String> list= new CopyOnWriteArrayList<>();
+//        list.add("1");
+//        list.add("2");
+//        list.add("3");
+//        list.add("4");
+//        list.add("5");
 
 //        Iterator<String> itr= list.iterator();
 //
@@ -39,17 +39,17 @@ public class Driver {
 //            }
 //        }
 //        System.out.println("List Size:" + list.size());
-        for(int i = 0; i<list.size(); i++){
-            System.out.println(list.get(i));
-            if(list.get(i).equals("3")){
-                list.remove(i);
-                i--;
-                list.add("6");
-            }
-        }
-        System.out.println("List Size:" + list.size());
+//        for(int i = 0; i<list.size(); i++){
+//            System.out.println(list.get(i));
+//            if(list.get(i).equals("3")){
+//                list.remove(i);
+//                i--;
+//                list.add("6");
+//            }
+//        }
+//        System.out.println("List Size:" + list.size());
 
-        //Now not deleting
+//        //Now not deleting
             Map<String,String> myMap= new ConcurrentHashMap<>();
         myMap.put("1","1");
         myMap.put("2","2");
@@ -61,13 +61,13 @@ public class Driver {
             String key= itr2.next();
             System.out.println("Map val: "+myMap.get(key));
             if(key.equals("1")){
-//                myMap.put("1","4");
+                //myMap.put("1","4");
                 myMap.remove("3");
                 myMap.put("4", "4");
                 myMap.put("5", "5");
             }
         }
-
-        System.out.println("Map Size:" + myMap.size());
+//
+//        System.out.println("Map Size:" + myMap.size());
     }
 }

@@ -1,0 +1,12 @@
+==>Difference between sleep, yeild, wait?
+* wait() method releases the acquired lock when the thread is waiting till some other threads calls notify. While sleep(sleepTime) method keeps the lock even if the thread is waiting.
+* wait() can only be called from the synchronized context otherwise
+it will throw IlligalMonitorStateException. while sleep() can be called from any state block.
+* wait is called on Object while sleep is called on Thread.
+* waiting thread can be awaken by calling nofify/notifyAll method
+while sleep cannot be awaken(though it can be interrupted).
+
+*yeild method pauses the currently executing thread temporarily
+for giving chance to remaining thread of same priority to execute.
+If there is no waiting thread, or all other threads have lower
+priority then same thread will continue its execution.

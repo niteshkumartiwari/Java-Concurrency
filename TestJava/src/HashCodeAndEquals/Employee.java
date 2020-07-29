@@ -37,20 +37,20 @@ public class Employee implements Comparable<Employee>{
         this.salary = salary;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Employee employee = (Employee) o;
-        return empNo == employee.empNo &&
-                salary == employee.salary &&
-                name.equals(employee.name);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(name, empNo, salary);
-    }
+//    @Override
+//    public boolean equals(Object o) {
+//        if (this == o) return true;
+//        if (o == null || getClass() != o.getClass()) return false;
+//        Employee employee = (Employee) o;
+//        return empNo == employee.empNo &&
+//                salary == employee.salary &&
+//                name.equals(employee.name);
+//    }
+//
+//    @Override
+//    public int hashCode() {
+//        return Objects.hash(name, empNo, salary);
+//    }
 
     @Override
     public int compareTo(Employee o) {

@@ -1,0 +1,29 @@
+Garbage Collector
+-Mark,Sweep,Compacting(Cause pause of application for few seconds)
+Division of Heap
+Young Generation
+-Eden
+-Survivor from(counter for no of cycke it survives)
+-Survivor to
+Old Generation
+
+Types of GC
+1- Serial Collector (single thread)
+2- Concurrent Collector (along with the application, pauses only for mark and re-mark)
+	When to use?
+	-more memory
+	-high number of CPUs
+	-application demands short pauses
+3- Parallel Collector (uses multiple CPUs, waits until the heap fills and then kicks in)
+	When to use?
+	-There is lesser memory
+	-There is lesser number of CPUs
+	-Application demands high throughtput and can withstand pauses
+4- G1 GC-(Garbage first)(parallel + concurrent)
+	Divides heaps into smaller regions. Where there is more garbage
+	it gets collected
+	-Low pauses with fragmentation
+	-Parallel and concurrent together
+	-Better heap utilization
+
+
